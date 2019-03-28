@@ -30,47 +30,49 @@ export default class RegisterScreen extends Component{
               <Col>
                 <Form>
                   <Grid>
-                      <Row style={{ justifyContent:'center' }}>
+                      <Row style={{ alignItems:'center' }} size={30}>
                           <Image
-                            style={{ width:400,height:200, marginBottom:'20%' }}
+                            style={{ width:400,height:200, }}
                             source={{uri: 'https://cdn.freebiesupply.com/images/thumbs/2x/pokemon-logo-black-transparent.png'}}
                           />
                       </Row>
+                      <Row size={70}>
                       <Col>
-                        <Item >
-                          <Input
-                          onChangeText={ (text)=>{ this.setState({ name: text }) } }
-                          placeholder="Name" />
-                        </Item>  
-                        <Item>
-                          <Input
-                          onChangeText={ (text)=>{ this.setState({ lastname: text }) } }
-                          placeholder="Last Name" />
-                        </Item>
-                        <Item>
-                          <Input
-                          onChangeText={ (text)=>{ this.setState({ username: text }) } }
-                          placeholder="Username" />
-                        </Item>
-                        <Item>
-                          <Input
-                          onChangeText={ (text)=>{ this.setState({ email: text }) } }
-                          placeholder="Email" />
-                        </Item>
-                        <Item>
-                          <Input 
-                          onChangeText={ (text)=>{ this.setState({ password: text }) } }
-                          secureTextEntry={true}
-                          placeholder="Password" />
-                        </Item>
-                        <Item>
-                          <Input
-                          onChangeText={ (text)=>{ this.setState({ password_confirmation: text }) } }
-                          secureTextEntry={true}
-                          placeholder="Confirm Password" />
-                        </Item>  
-                        {this.showButtons()}
-                    </Col>
+                          <Item >
+                            <Input
+                            onChangeText={ (text)=>{ this.setState({ name: text }) } }
+                            placeholder="Name" />
+                          </Item>  
+                          <Item>
+                            <Input
+                            onChangeText={ (text)=>{ this.setState({ lastname: text }) } }
+                            placeholder="Last Name" />
+                          </Item>
+                          <Item>
+                            <Input
+                            onChangeText={ (text)=>{ this.setState({ username: text }) } }
+                            placeholder="Username" />
+                          </Item>
+                          <Item>
+                            <Input
+                            onChangeText={ (text)=>{ this.setState({ email: text }) } }
+                            placeholder="Email" />
+                          </Item>
+                          <Item>
+                            <Input 
+                            onChangeText={ (text)=>{ this.setState({ password: text }) } }
+                            secureTextEntry={true}
+                            placeholder="Password" />
+                          </Item>
+                          <Item>
+                            <Input
+                            onChangeText={ (text)=>{ this.setState({ password_confirmation: text }) } }
+                            secureTextEntry={true}
+                            placeholder="Confirm Password" />
+                          </Item>  
+                          {this.showButtons()}
+                      </Col>
+                      </Row>
                   </Grid>
                 </Form>
               </Col>
@@ -146,8 +148,6 @@ const styles = StyleSheet.create({
     flex:1,
     flexDirection:'column',
     alignItems:'center',
-    height:'100%', 
-    width:'100%',
   },
   background: {
     position: "absolute",
